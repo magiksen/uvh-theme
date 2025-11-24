@@ -331,5 +331,17 @@ function uvh_customize_register(WP_Customize_Manager $wp_customize): void
         'section'  => 'uvh_social_media',
         'type'     => 'url',
     ]);
+
+    // TikTok
+    $wp_customize->add_setting('uvh_tiktok', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control('uvh_tiktok', [
+        'label'    => __('TikTok URL', 'uvh-theme'),
+        'section'  => 'uvh_social_media',
+        'type'     => 'url',
+    ]);
 }
 add_action('customize_register', 'uvh_customize_register');
