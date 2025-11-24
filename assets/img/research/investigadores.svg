@@ -1,0 +1,6 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#2C3E50"/>
+  <circle cx="200" cy="100" r="35" fill="white" opacity="0.3"/>
+  <text x="200" y="160" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Investigadores</text>
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.9">Carreras de Investigación</text>
+</svg>

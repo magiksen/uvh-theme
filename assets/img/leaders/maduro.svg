@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="gradMaduro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#gradMaduro)"/>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">NM</text>
+  <text x="200" y="240" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" opacity="0.9">Nicolás Maduro</text>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" opacity="0.8">Presidente de Venezuela</text>
+</svg>

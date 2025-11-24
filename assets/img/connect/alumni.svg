@@ -1,0 +1,5 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#CC0033"/>
+  <text x="200" y="130" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">Alumni</text>
+  <text x="200" y="165" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" opacity="0.9">Red de Egresados</text>
+</svg>

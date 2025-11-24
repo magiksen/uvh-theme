@@ -1,0 +1,312 @@
+/* ===================================
+   404 Error Page Styles
+   =================================== */
+
+.error-404-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 80px;
+    overflow: hidden;
+}
+
+/* Background con gradiente UVH */
+.error-404-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    z-index: 1;
+}
+
+.error-404-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 201, 7, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(167, 3, 54, 0.15) 0%, transparent 50%);
+    z-index: 2;
+}
+
+/* Contenido */
+.error-404-section .container {
+    position: relative;
+    z-index: 3;
+}
+
+.error-404-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Número 404 grande */
+.error-404-number {
+    font-size: clamp(120px, 20vw, 200px);
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.15);
+    line-height: 1;
+    margin-bottom: -40px;
+    text-shadow: 0 0 40px rgba(255, 201, 7, 0.3);
+    letter-spacing: -10px;
+}
+
+/* Título */
+.error-404-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+/* Texto descriptivo */
+.error-404-text {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 48px;
+    line-height: 1.8;
+}
+
+/* Botones de acción */
+.error-404-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+}
+
+.error-404-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.error-404-actions .btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+}
+
+.error-404-actions .btn-primary:hover {
+    background-color: #ffb800;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 201, 7, 0.4);
+}
+
+.error-404-actions .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.error-404-actions .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.error-404-actions svg {
+    flex-shrink: 0;
+}
+
+/* Buscador */
+.error-404-search {
+    margin-bottom: 64px;
+}
+
+.error-404-search-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.error-404-search form {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.error-404-search input[type="search"] {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: var(--transition);
+}
+
+.error-404-search input[type="search"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.error-404-search input[type="search"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 4px rgba(255, 201, 7, 0.2);
+}
+
+.error-404-search button[type="submit"] {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.error-404-search button[type="submit"]:hover {
+    background-color: #ffb800;
+}
+
+/* Enlaces útiles */
+.error-404-links {
+    margin-top: 64px;
+}
+
+.error-404-links-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 32px;
+}
+
+.error-404-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.error-404-link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.error-404-link-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-color);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.error-404-link-card svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2;
+}
+
+.error-404-link-card span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .error-404-section {
+        padding: 80px 0 60px;
+    }
+    
+    .error-404-number {
+        font-size: 100px;
+        margin-bottom: -20px;
+    }
+    
+    .error-404-title {
+        font-size: 2rem;
+    }
+    
+    .error-404-text {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+    
+    .error-404-actions {
+        flex-direction: column;
+        margin-bottom: 48px;
+    }
+    
+    .error-404-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .error-404-search {
+        margin-bottom: 48px;
+    }
+    
+    .error-404-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .error-404-link-card {
+        padding: 20px 12px;
+    }
+    
+    .error-404-link-card svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .error-404-link-card span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-404-number {
+        font-size: 80px;
+        letter-spacing: -5px;
+    }
+    
+    .error-404-links-grid {
+        grid-template-columns: 1fr;
+    }
+}

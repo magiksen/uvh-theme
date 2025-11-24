@@ -1,0 +1,647 @@
+<?php
+declare(strict_types=1);
+
+/**
+ * Template part for displaying PNF Geofísica curriculum
+ * 
+ * @package UVH_Theme
+ */
+
+if (!defined('ABSPATH')) {
+    exit;
+}
+?>
+
+<!-- Malla Curricular -->
+<div class="curriculum-section">
+    <button class="curriculum-toggle" onclick="this.parentElement.classList.toggle('active')">
+        <span>Ver Malla Curricular Completa</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </button>
+    <div class="curriculum-content">
+        <div class="curriculum-tables">
+            
+            <!-- Trayecto Inicial -->
+            <div class="curriculum-table-wrapper">
+                <h4 class="curriculum-table-title">Trayecto Inicial</h4>
+                <div class="curriculum-table-scroll">
+                    <table class="curriculum-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad Curricular</th>
+                                <th>Sem</th>
+                                <th>HTA</th>
+                                <th>HTI</th>
+                                <th>HTE</th>
+                                <th>HTA/Sem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-yellow">
+                                <td>Desarrollo del Motor Hidrocarburos</td>
+                                <td>12</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Matemática</td>
+                                <td>12</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Fundamentos de Física</td>
+                                <td>12</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Fundamentos de Química</td>
+                                <td>12</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Lenguaje y Comunicación</td>
+                                <td>12</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Seguridad Industrial e Higiene Ocupacional</td>
+                                <td>12</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-blue">
+                                <td>Deporte, Arte y Salud</td>
+                                <td>12</td>
+                                <td>36</td>
+                                <td>14</td>
+                                <td>50</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Fundamentos de Estudios Integrados</td>
+                                <td>12</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Tecnologías de la Información y las Comunicaciones</td>
+                                <td>12</td>
+                                <td>28</td>
+                                <td>4</td>
+                                <td>32</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Ambiente</td>
+                                <td>12</td>
+                                <td>28</td>
+                                <td>4</td>
+                                <td>32</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Trayecto I -->
+            <div class="curriculum-table-wrapper">
+                <h4 class="curriculum-table-title">Trayecto I</h4>
+                <div class="curriculum-table-scroll">
+                    <table class="curriculum-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad Curricular</th>
+                                <th>Sem</th>
+                                <th>HTA</th>
+                                <th>HTI</th>
+                                <th>HTE</th>
+                                <th>UC</th>
+                                <th>HTA/Sem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-yellow">
+                                <td>Química General</td>
+                                <td>36</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Ecología</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Geología estructural</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Programación</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Geometría Descriptiva</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Matemática</td>
+                                <td>18</td>
+                                <td>84</td>
+                                <td>34</td>
+                                <td>118</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Física</td>
+                                <td>18</td>
+                                <td>84</td>
+                                <td>34</td>
+                                <td>118</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Legislación petrolera nacional e internacional</td>
+                                <td>18</td>
+                                <td>36</td>
+                                <td>14</td>
+                                <td>50</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-blue">
+                                <td>Geofísica</td>
+                                <td>36</td>
+                                <td>84</td>
+                                <td>34</td>
+                                <td>118</td>
+                                <td>4</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Estadística aplicada</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Proyecto Sociointegrador I</td>
+                                <td>36</td>
+                                <td>120</td>
+                                <td>48</td>
+                                <td>168</td>
+                                <td>6</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Formación Sociocrítica I</td>
+                                <td>36</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Deporte, Arte y Recreación I</td>
+                                <td>36</td>
+                                <td>72</td>
+                                <td>14</td>
+                                <td>86</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-total">
+                                <td colspan="5"><strong>Total UC</strong></td>
+                                <td colspan="2"><strong>46</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Trayecto II -->
+            <div class="curriculum-table-wrapper">
+                <h4 class="curriculum-table-title">Trayecto II</h4>
+                <div class="curriculum-table-scroll">
+                    <table class="curriculum-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad Curricular</th>
+                                <th>Sem</th>
+                                <th>HTA</th>
+                                <th>HTI</th>
+                                <th>HTE</th>
+                                <th>UC</th>
+                                <th>HTA/Sem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-yellow">
+                                <td>Cálculo diferencial</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Química del petróleo</td>
+                                <td>18</td>
+                                <td>84</td>
+                                <td>34</td>
+                                <td>118</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Mineralogía y Petrología</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Métodos Sísmicos</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Métodos potenciales</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Geología de Venezuela</td>
+                                <td>18</td>
+                                <td>48</td>
+                                <td>19</td>
+                                <td>67</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Adquisición de datos e instrumentación geofísica</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Estratigrafía y sedimentación</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Procesamiento digital de señales</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Geomática para Geociencias</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Mecánica de fluidos</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Proyecto Sociointegrador II</td>
+                                <td>28</td>
+                                <td>94</td>
+                                <td>38</td>
+                                <td>132</td>
+                                <td>5</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Formación Sociocrítica II</td>
+                                <td>28</td>
+                                <td>56</td>
+                                <td>22</td>
+                                <td>78</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Deporte, Arte y Recreación II</td>
+                                <td>28</td>
+                                <td>56</td>
+                                <td>11</td>
+                                <td>67</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-blue">
+                                <td>Práctica Profesional I</td>
+                                <td>8</td>
+                                <td>20</td>
+                                <td>240</td>
+                                <td>260</td>
+                                <td>9</td>
+                                <td>30</td>
+                            </tr>
+                            <tr class="row-total">
+                                <td colspan="5"><strong>Total UC</strong></td>
+                                <td colspan="2"><strong>57</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Trayecto III -->
+            <div class="curriculum-table-wrapper">
+                <h4 class="curriculum-table-title">Trayecto III</h4>
+                <div class="curriculum-table-scroll">
+                    <table class="curriculum-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad Curricular</th>
+                                <th>Sem</th>
+                                <th>HTA</th>
+                                <th>HTI</th>
+                                <th>HTE</th>
+                                <th>UC</th>
+                                <th>HTA/Sem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-yellow">
+                                <td>Geomatemática</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Procesamiento de datos sísmicos</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Geofísica de pozos</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Física de rocas</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Interpretación integrada de datos geofísicos</td>
+                                <td>18</td>
+                                <td>84</td>
+                                <td>34</td>
+                                <td>118</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Análisis e interpretación de registros geofísicos</td>
+                                <td>18</td>
+                                <td>94</td>
+                                <td>38</td>
+                                <td>132</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Proyecto Sociointegrador III</td>
+                                <td>36</td>
+                                <td>120</td>
+                                <td>48</td>
+                                <td>168</td>
+                                <td>6</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Formación Sociocrítica III</td>
+                                <td>36</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Deporte, Arte y Recreación III</td>
+                                <td>36</td>
+                                <td>72</td>
+                                <td>14</td>
+                                <td>86</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-total">
+                                <td colspan="5"><strong>Total UC</strong></td>
+                                <td colspan="2"><strong>38</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Trayecto IV -->
+            <div class="curriculum-table-wrapper">
+                <h4 class="curriculum-table-title">Trayecto IV</h4>
+                <div class="curriculum-table-scroll">
+                    <table class="curriculum-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad Curricular</th>
+                                <th>Sem</th>
+                                <th>HTA</th>
+                                <th>HTI</th>
+                                <th>HTE</th>
+                                <th>UC</th>
+                                <th>HTA/Sem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-yellow">
+                                <td>Electiva 1</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Geofísica de exploración</td>
+                                <td>18</td>
+                                <td>84</td>
+                                <td>34</td>
+                                <td>118</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>La industria petrolera y su impacto en el ambiente, Seguridad e Higiene</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Geoestadística</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>29</td>
+                                <td>101</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-yellow">
+                                <td>Electiva 2</td>
+                                <td>18</td>
+                                <td>64</td>
+                                <td>26</td>
+                                <td>90</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Proyecto Sociointegrador IV</td>
+                                <td>28</td>
+                                <td>94</td>
+                                <td>38</td>
+                                <td>132</td>
+                                <td>5</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Formación Sociocrítica IV</td>
+                                <td>28</td>
+                                <td>56</td>
+                                <td>22</td>
+                                <td>78</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-orange">
+                                <td>Deporte, Arte y Recreación IV</td>
+                                <td>28</td>
+                                <td>56</td>
+                                <td>11</td>
+                                <td>67</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="row-blue">
+                                <td>Práctica Profesional II</td>
+                                <td>8</td>
+                                <td>20</td>
+                                <td>240</td>
+                                <td>260</td>
+                                <td>9</td>
+                                <td>30</td>
+                            </tr>
+                            <tr class="row-total">
+                                <td colspan="5"><strong>Total UC</strong></td>
+                                <td colspan="2"><strong>39</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
