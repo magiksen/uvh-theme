@@ -3,11 +3,23 @@ declare(strict_types=1);
 
 if (!defined('ABSPATH')) exit;
 
-// Query hero slides
+// Query hero slides (solo activos)
 $hero_slides = new WP_Query([
     'post_type' => 'hero_slide',
     'posts_per_page' => -1,
     'post_status' => 'publish',
+    'meta_query' => [
+        'relation' => 'OR',
+        [
+            'key' => '_uvh_slide_active',
+            'value' => '1',
+            'compare' => '='
+        ],
+        [
+            'key' => '_uvh_slide_active',
+            'compare' => 'NOT EXISTS'
+        ]
+    ],
     'meta_key' => '_uvh_slide_order',
     'orderby' => 'meta_value_num',
     'order' => 'ASC',
@@ -91,6 +103,65 @@ $has_custom_slides = $hero_slides->have_posts();
         
         <?php endwhile; wp_reset_postdata(); ?>
         
+        <!-- Slide de Noticia Destacada -->
+        <?php
+        // Obtener la noticia destacada (la más reciente con categoría "noticias")
+        $featured_news = new WP_Query([
+            'post_type' => 'post',
+            'posts_per_page' => 1,
+            'post_status' => 'publish',
+            'category_name' => 'noticias',
+            'orderby' => 'date',
+            'order' => 'DESC',
+        ]);
+        
+        if ($featured_news->have_posts()) :
+            while ($featured_news->have_posts()) : $featured_news->the_post();
+                $news_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                $news_excerpt = wp_trim_words(get_the_excerpt(), 30, '...');
+        ?>
+        
+        <div class="hero__slide hero__slide--news">
+            <div class="hero__overlay"></div>
+            <div class="hero__background">
+                <?php if ($news_image) : ?>
+                    <img src="<?php echo esc_url($news_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                <?php else : ?>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/hero/estudiantes.svg'); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                <?php endif; ?>
+            </div>
+            <div class="container">
+                <div class="hero__content hero__content--news">
+                    <span class="hero__news-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+                            <path d="M18 14h-8"/>
+                            <path d="M15 18h-5"/>
+                            <path d="M10 6h8v4h-8z"/>
+                        </svg>
+                        <?php esc_html_e('Noticia Destacada', 'uvh-theme'); ?>
+                    </span>
+                    <h1 class="hero__title hero__title--news">
+                        <?php echo esc_html(get_the_title()); ?>
+                    </h1>
+                    <p class="hero__subtitle hero__subtitle--news">
+                        <?php echo esc_html($news_excerpt); ?>
+                    </p>
+                    <div class="hero__actions">
+                        <a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn--primary">
+                            <?php esc_html_e('Ver noticia', 'uvh-theme'); ?>
+                        </a>
+                        <a href="<?php echo esc_url(home_url('/noticias')); ?>" class="btn btn--outline">
+                            <?php esc_html_e('Ver más noticias', 'uvh-theme'); ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <?php endwhile; wp_reset_postdata(); ?>
+        <?php endif; ?>
+        
         <?php else : ?>
             <!-- Slide por defecto cuando no hay slides personalizados -->
             <div class="hero__slide active">
@@ -119,7 +190,15 @@ $has_custom_slides = $hero_slides->have_posts();
         <?php endif; ?>
     </div>
     
-    <?php if ($has_custom_slides && $hero_slides->post_count > 1) : ?>
+    <?php 
+    // Calcular el total de slides (custom slides + slide de noticias si existe)
+    $total_slides = $has_custom_slides ? $hero_slides->post_count : 0;
+    if ($featured_news && $featured_news->have_posts()) {
+        $total_slides++;
+    }
+    
+    if ($total_slides > 1) : 
+    ?>
         <!-- Slider Controls -->
         <button class="hero__nav hero__nav--prev" aria-label="<?php esc_attr_e('Slide anterior', 'uvh-theme'); ?>">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -134,7 +213,7 @@ $has_custom_slides = $hero_slides->have_posts();
         
         <!-- Slider Indicators -->
         <div class="hero__indicators">
-            <?php for ($i = 0; $i < $hero_slides->post_count; $i++) : ?>
+            <?php for ($i = 0; $i < $total_slides; $i++) : ?>
                 <button 
                     class="hero__indicator <?php echo $i === 0 ? 'active' : ''; ?>" 
                     data-slide="<?php echo esc_attr($i); ?>"

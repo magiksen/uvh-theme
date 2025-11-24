@@ -268,6 +268,11 @@ require_once get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/hero-slider.php';
 
 /**
+ * Academic Programs CPT
+ */
+require_once get_template_directory() . '/inc/academic-programs.php';
+
+/**
  * Testimonials CPT
  */
 require_once get_template_directory() . '/inc/testimonials.php';

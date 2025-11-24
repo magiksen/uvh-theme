@@ -22,8 +22,8 @@ get_header();
 <!-- Sobre Nosotros Section -->
 <?php get_template_part('template-parts/section', 'about'); ?>
 
-<!-- Oferta Académica Section -->
-<?php get_template_part('template-parts/section', 'programs'); ?>
+<!-- Oferta Académica Section (Dynamic) -->
+<?php get_template_part('template-parts/section', 'programs-dynamic'); ?>
 
 <!-- Investigación e Innovación Section -->
 <?php get_template_part('template-parts/section', 'research'); ?>

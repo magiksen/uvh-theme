@@ -80,8 +80,29 @@ function uvh_hero_slide_meta_box_callback($post): void
     $button2_text = get_post_meta($post->ID, '_uvh_slide_button2_text', true);
     $button2_link = get_post_meta($post->ID, '_uvh_slide_button2_link', true);
     $slide_order = get_post_meta($post->ID, '_uvh_slide_order', true);
+    $slide_active = get_post_meta($post->ID, '_uvh_slide_active', true);
+    $slide_active = $slide_active !== '' ? $slide_active : '1'; // Por defecto activo
 
     ?>
+    <div style="margin-bottom: 20px; padding: 15px; background: #f0f0f1; border-left: 4px solid #2271b1;">
+        <label style="display: flex; align-items: center; cursor: pointer;">
+            <input 
+                type="checkbox" 
+                id="uvh_slide_active" 
+                name="uvh_slide_active" 
+                value="1"
+                <?php checked($slide_active, '1'); ?>
+                style="margin-right: 8px; width: 20px; height: 20px;"
+            >
+            <span style="font-weight: bold; font-size: 16px;">
+                <?php esc_html_e('Slide Activo', 'uvh-theme'); ?>
+            </span>
+        </label>
+        <p class="description" style="margin: 8px 0 0 28px;">
+            <?php esc_html_e('Desmarca esta casilla para desactivar el slide sin eliminarlo. Los slides desactivados no aparecerán en el slider.', 'uvh-theme'); ?>
+        </p>
+    </div>
+
     <div style="margin-bottom: 15px;">
         <label for="uvh_slide_subtitle" style="display: block; margin-bottom: 5px; font-weight: bold;">
             <?php esc_html_e('Subtítulo:', 'uvh-theme'); ?>
@@ -205,6 +226,10 @@ function uvh_save_hero_slide_meta(int $post_id): void
         return;
     }
 
+    // Save active status
+    $slide_active = isset($_POST['uvh_slide_active']) ? '1' : '0';
+    update_post_meta($post_id, '_uvh_slide_active', $slide_active);
+
     // Save subtitle
     if (isset($_POST['uvh_slide_subtitle'])) {
         update_post_meta($post_id, '_uvh_slide_subtitle', sanitize_textarea_field($_POST['uvh_slide_subtitle']));
@@ -244,6 +269,7 @@ function uvh_hero_slide_columns(array $columns): array
     $new_columns['title'] = $columns['title'];
     $new_columns['subtitle'] = __('Subtítulo', 'uvh-theme');
     $new_columns['order'] = __('Orden', 'uvh-theme');
+    $new_columns['status'] = __('Estado', 'uvh-theme');
     $new_columns['date'] = $columns['date'];
     
     return $new_columns;
@@ -270,6 +296,15 @@ function uvh_hero_slide_column_content(string $column, int $post_id): void
         case 'order':
             $order = get_post_meta($post_id, '_uvh_slide_order', true);
             echo esc_html($order ?: '0');
+            break;
+        case 'status':
+            $active = get_post_meta($post_id, '_uvh_slide_active', true);
+            $active = $active !== '' ? $active : '1'; // Por defecto activo
+            if ($active === '1') {
+                echo '<span style="color: #46b450; font-weight: bold;">● ' . esc_html__('Activo', 'uvh-theme') . '</span>';
+            } else {
+                echo '<span style="color: #dc3232; font-weight: bold;">● ' . esc_html__('Inactivo', 'uvh-theme') . '</span>';
+            }
             break;
     }
 }
