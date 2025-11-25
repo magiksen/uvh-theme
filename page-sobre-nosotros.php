@@ -163,7 +163,7 @@ get_header();
                 <!-- Hugo Chávez -->
                 <div class="quote-card">
                     <div class="quote-card__image">
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/leaders/chavez.svg'); ?>" 
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/leaders/comandante.webp'); ?>" 
                              alt="Hugo Chávez">
                     </div>
                     <div class="quote-card__content">
@@ -181,7 +181,7 @@ get_header();
                 <!-- Nicolás Maduro -->
                 <div class="quote-card">
                     <div class="quote-card__image">
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/leaders/maduro.svg'); ?>" 
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/leaders/presidente.webp'); ?>" 
                              alt="Nicolás Maduro">
                     </div>
                     <div class="quote-card__content">
