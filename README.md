@@ -261,6 +261,28 @@ El tema está optimizado para:
 
 ## 📝 Changelog
 
+### Versión 1.4.0 (2025-11-25)
+
+#### 📚 Mallas Curriculares Completas
+- Crear `curriculum-gestion-pozos.php` - PNF Gestión Integral de Pozos de Hidrocarburos
+- Crear `curriculum-petroquimica.php` - PNF Petroquímica
+- Crear `curriculum-gas.php` - PNF Producción y Procesamiento de Gas
+- Crear `curriculum-yacimientos.php` - PNF Yacimientos de Hidrocarburos
+- Todas las mallas incluyen: Trayecto Inicial + Trayectos I, II, III y IV
+- Leyenda de siglas integrada en cada malla curricular
+- Colores diferenciados por tipo de materia (amarillo, verde, naranja, azul)
+
+#### 🎨 Estilos CSS
+- Agregar estilo `.row-green` para materias específicas de carrera
+
+#### 📁 Archivos Nuevos
+- `template-parts/curriculum-gestion-pozos.php`
+- `template-parts/curriculum-petroquimica.php`
+- `template-parts/curriculum-gas.php`
+- `template-parts/curriculum-yacimientos.php`
+
+---
+
 ### Versión 1.3.0 (2025-11-24)
 
 #### 🌐 Nueva Página: Cooperación Nacional e Internacional
