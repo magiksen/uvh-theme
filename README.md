@@ -43,41 +43,52 @@ Tema oficial de WordPress para la Universidad Venezolana de los Hidrocarburos (U
 uvh-theme/
 ├── assets/
 │   ├── css/
-│   │   └── custom.css          # Estilos personalizados de la plantilla
+│   │   └── custom.css              # Estilos personalizados
 │   ├── js/
-│   │   └── main.js             # JavaScript principal
-│   └── img/                    # Imágenes y SVG del tema
+│   │   └── main.js                 # JavaScript principal
+│   └── img/                        # Imágenes y SVG del tema
 │       ├── logo.svg
 │       ├── hero/
+│       ├── leaders/                # Imágenes de líderes
 │       ├── programs/
 │       ├── research/
 │       ├── testimonials/
 │       └── news/
 ├── inc/
-│   ├── template-tags.php       # Funciones de plantilla personalizadas
-│   └── customizer.php          # Configuración del Customizer
+│   ├── template-tags.php           # Funciones de plantilla
+│   ├── customizer.php              # Configuración del Customizer
+│   ├── hero-slider.php             # CPT Hero Slides
+│   └── academic-programs.php       # CPT Programas Académicos
 ├── template-parts/
-│   ├── content.php             # Template para posts
-│   ├── content-none.php        # Template para "sin resultados"
-│   ├── section-about.php       # Sección Sobre Nosotros
-│   ├── section-programs.php    # Sección Oferta Académica
-│   ├── section-research.php    # Sección Investigación
-│   ├── section-admission.php   # Sección Admisión
-│   ├── section-stats.php       # Sección Estadísticas
-│   ├── section-cta.php         # Sección CTA
-│   ├── section-testimonials.php # Sección Testimonios
-│   ├── section-news.php        # Sección Noticias
-│   └── section-contact.php     # Sección Contacto
-├── functions.php               # Funciones del tema
-├── header.php                  # Cabecera del sitio
-├── footer.php                  # Pie de página
-├── index.php                   # Template principal
-├── front-page.php              # Página de inicio
-├── single.php                  # Template para posts individuales
-├── page.php                    # Template para páginas
-├── style.css                   # Hoja de estilos principal
-├── theme.json                  # Configuración del tema (FSE)
-└── README.md                   # Este archivo
+│   ├── content.php                 # Template para posts
+│   ├── content-none.php            # Template "sin resultados"
+│   ├── section-about.php           # Sección Sobre Nosotros
+│   ├── section-programs-dynamic.php # Sección Programas (dinámico)
+│   ├── section-hero-slider.php     # Hero Slider dinámico
+│   ├── section-research.php        # Sección Investigación
+│   ├── section-admission.php       # Sección Admisión
+│   ├── section-stats.php           # Sección Estadísticas
+│   ├── section-cta.php             # Sección CTA
+│   ├── section-testimonials.php    # Sección Testimonios
+│   ├── section-news.php            # Sección Noticias
+│   ├── section-contact.php         # Sección Contacto
+│   └── curriculum-geofisica.php    # Malla curricular Geofísica
+├── page-sobre-nosotros.php         # Página Sobre Nosotros
+├── page-oferta-academica.php       # Página Oferta Académica
+├── page-estudios-internacionales.php # Página Cooperación Internacional
+├── page-formulario-admision.php    # Página Formulario de Admisión
+├── functions.php                   # Funciones del tema
+├── header.php                      # Cabecera del sitio
+├── footer.php                      # Pie de página
+├── index.php                       # Template principal
+├── front-page.php                  # Página de inicio
+├── single.php                      # Template para posts
+├── page.php                        # Template para páginas
+├── archive.php                     # Template para archivos
+├── style.css                       # Hoja de estilos principal (v1.3.0)
+├── theme.json                      # Configuración del tema (FSE)
+├── screenshot.png                  # Captura del tema
+└── README.md                       # Este archivo
 ```
 
 ## 🚀 Instalación
@@ -250,6 +261,67 @@ El tema está optimizado para:
 
 ## 📝 Changelog
 
+### Versión 1.3.0 (2025-11-24)
+
+#### 🌐 Nueva Página: Cooperación Nacional e Internacional
+- Creación de `page-estudios-internacionales.php` con secciones completas
+- Alianzas nacionales: PDVSA, Intevep, Ministerio de Economía y Finanzas
+- Convenios internacionales activos: Universidad Gúbkin (Rusia), Universidad Denis Sassou-Nguesso (Congo)
+- Alianzas en proceso: Universidad Rey Fahd (Arabia Saudita), MGRI y Ekaterina II (Rusia)
+- Sección de impacto y resultados con tarjetas informativas
+- CTA con email de contacto para cooperación
+
+#### 🎓 Programas Académicos Dinámicos
+- Custom Post Type `academic_program` para gestionar programas desde el admin
+- Meta boxes para: estado activo, subtítulo, icono emoji, orden, características (6), URL del botón
+- Columnas personalizadas en el listado del admin (Estado, Icono, Orden)
+- Template dinámico `section-programs-dynamic.php` que consulta la base de datos
+- Sistema de iconos con emojis categorizados (académicos, científicos, energéticos, etc.)
+- Subsección de Estudios Internacionales integrada en la sección de programas
+
+#### 🖼️ Hero Slider Mejorado
+- Nuevo slide de noticias integrado al slider principal
+- Campo checkbox para activar/desactivar slides individualmente
+- Columna de estado visual en el admin (Activo/Inactivo)
+- Filtrado automático de slides inactivos en el frontend
+
+#### 📚 Página de Oferta Académica
+- Leyenda de siglas para mallas curriculares (Sem, HTA, HTI, HTE, UC, HTA/Sem)
+- Leyenda integrada dentro de cada malla curricular expandible
+- Actualización de títulos de programas (TSU/Ingeniero)
+
+#### 🎨 Mejoras Visuales - Fondos de Secciones
+- **About**: Línea gradiente superior con colores institucionales (rojo→amarillo→azul)
+- **Programs**: Gradiente gris→blanco + línea decorativa roja inferior
+- **Admission**: Nueva clase `.admission-home` con gradiente sutil azul↔rojo
+- **Research**: Gradiente con toques de marca + círculo decorativo
+- **Testimonials**: Gradiente ondulado + comilla decorativa gigante de fondo
+- **News**: Gradiente + círculos decorativos sutiles con colores de marca
+- **Section Headers**: Línea decorativa debajo de títulos con gradiente rojo→amarillo
+
+#### 🔗 Footer Actualizado
+- Enlace a Cooperación Nacional e Internacional
+- Enlaces actualizados a páginas internas (/oferta-academica, /formulario-admision)
+
+#### 📁 Archivos Nuevos
+- `page-estudios-internacionales.php` - Template de cooperación internacional
+- `inc/academic-programs.php` - CPT de programas académicos
+- `template-parts/section-programs-dynamic.php` - Template dinámico de programas
+- `migration-academic-programs.sql` - Script SQL de migración
+
+---
+
+### Versión 1.2.0 (2025-11-23)
+- ✅ Página "Sobre Nosotros" con historia, misión, visión y valores
+- ✅ Sección de citas de líderes con imágenes
+- ✅ Integración de redes sociales en footer y sección "Conoce Más"
+- ✅ Iconos SVG para redes sociales (Facebook, Instagram, Twitter/X, YouTube, TikTok)
+
+### Versión 1.1.0 (2025-11-22)
+- ✅ Redes sociales configurables desde el Customizer
+- ✅ Iconos de redes sociales en el footer
+- ✅ Mejoras en la sección de contacto
+
 ### Versión 1.0.0 (2025-11-11)
 - ✅ Lanzamiento inicial del tema
 - ✅ Implementación de colores oficiales del Manual de Marca
@@ -266,8 +338,8 @@ El tema está optimizado para:
 - **Desarrollado para**: Universidad Venezolana de los Hidrocarburos
 - **Basado en**: Plantilla HTML UVH
 - **Tipografía**: Georama (Google Fonts)
-- **Versión**: 1.0.0
-- **Fecha**: Noviembre 2025
+- **Versión**: 1.3.0
+- **Última actualización**: 24 de Noviembre 2025
 
 ## 📄 Licencia
 
