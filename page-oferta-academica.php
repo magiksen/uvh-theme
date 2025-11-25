@@ -88,6 +88,8 @@ get_header();
                             <span class="topic-tag">Sistemas de Producción</span>
                             <span class="topic-tag">Monitoreo Avanzado</span>
                         </div>
+
+                        <?php get_template_part('template-parts/curriculum', 'gestion-pozos'); ?>
                     </div>
                 </div>
 
@@ -113,6 +115,8 @@ get_header();
                             <span class="topic-tag">Catalizadores</span>
                             <span class="topic-tag">Sostenibilidad</span>
                         </div>
+
+                        <?php get_template_part('template-parts/curriculum', 'petroquimica'); ?>
                     </div>
                 </div>
 
@@ -140,6 +144,8 @@ get_header();
                             <span class="topic-tag">Transición Energética</span>
                             <span class="topic-tag">Industrialización</span>
                         </div>
+
+                        <?php get_template_part('template-parts/curriculum', 'gas'); ?>
                     </div>
                 </div>
 
@@ -166,6 +172,8 @@ get_header();
                             <span class="topic-tag">Recuperación Mejorada</span>
                             <span class="topic-tag">Monitoreo</span>
                         </div>
+
+                        <?php get_template_part('template-parts/curriculum', 'yacimientos'); ?>
                     </div>
                 </div>
             </div>

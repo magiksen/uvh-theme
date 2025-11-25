@@ -2161,6 +2161,10 @@ button {
     background-color: #FFE8D6;
 }
 
+.curriculum-table .row-green {
+    background-color: #E8F5E9;
+}
+
 .curriculum-table .row-total {
     background-color: #FDB913;
     font-weight: 700;
