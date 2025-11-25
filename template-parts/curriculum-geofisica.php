@@ -21,6 +21,19 @@ if (!defined('ABSPATH')) {
         </svg>
     </button>
     <div class="curriculum-content">
+        <!-- Leyenda de Siglas -->
+        <div class="curriculum-legend curriculum-legend--inline">
+            <h4 class="curriculum-legend__title"><?php esc_html_e('Leyenda para los cuadros:', 'uvh-theme'); ?></h4>
+            <ul class="curriculum-legend__list">
+                <li><strong>Sem:</strong> <?php esc_html_e('Duración de la unidad curricular en semanas.', 'uvh-theme'); ?></li>
+                <li><strong>HTA:</strong> <?php esc_html_e('Horas de Trabajo Acompañado (las que se realizan con el acompañamiento del docente).', 'uvh-theme'); ?></li>
+                <li><strong>HTI:</strong> <?php esc_html_e('Horas de Trabajo Independiente (las que realiza el estudiante solo o en conjunto con sus compañeros).', 'uvh-theme'); ?></li>
+                <li><strong>HTE:</strong> <?php esc_html_e('Total de Horas de Estudio.', 'uvh-theme'); ?></li>
+                <li><strong>UC:</strong> <?php esc_html_e('Unidades Crédito.', 'uvh-theme'); ?></li>
+                <li><strong>HTA/Sem:</strong> <?php esc_html_e('Total de Horas semanales de Trabajo Acompañado.', 'uvh-theme'); ?></li>
+            </ul>
+        </div>
+
         <div class="curriculum-tables">
             
             <!-- Trayecto Inicial -->

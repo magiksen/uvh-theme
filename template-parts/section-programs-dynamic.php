@@ -87,5 +87,41 @@ if (!$programs_query->have_posts()) {
             
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
+
+        <!-- Subsección Estudios Internacionales -->
+        <div class="international-summary" id="estudios-internacionales">
+            <div class="international-summary__content">
+                <div class="international-summary__icon">🌐</div>
+                <div class="international-summary__text">
+                    <h3 class="international-summary__title"><?php esc_html_e('Cooperación Nacional e Internacional', 'uvh-theme'); ?></h3>
+                    <p class="international-summary__description">
+                        <?php esc_html_e('La UVH establece una sólida red de cooperación que integra al sector nacional con centros de excelencia mundial, fundamentada en la soberanía tecnológica, la reciprocidad y la transferencia efectiva de conocimiento.', 'uvh-theme'); ?>
+                    </p>
+                    <div class="international-summary__highlights">
+                        <div class="international-summary__highlight">
+                            <span class="highlight-flag">🇻🇪</span>
+                            <span><?php esc_html_e('PDVSA, Intevep, Ministerios', 'uvh-theme'); ?></span>
+                        </div>
+                        <div class="international-summary__highlight">
+                            <span class="highlight-flag">🇷🇺</span>
+                            <span><?php esc_html_e('Universidad Gúbkin', 'uvh-theme'); ?></span>
+                        </div>
+                        <div class="international-summary__highlight">
+                            <span class="highlight-flag">🇸🇦</span>
+                            <span><?php esc_html_e('Universidad Rey Fahd', 'uvh-theme'); ?></span>
+                        </div>
+                        <div class="international-summary__highlight">
+                            <span class="highlight-flag">🇨🇬</span>
+                            <span><?php esc_html_e('Universidad Denis Sassou-Nguesso', 'uvh-theme'); ?></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="international-summary__action">
+                    <a href="<?php echo esc_url(home_url('/estudios-internacionales/')); ?>" class="btn btn--primary">
+                        <?php esc_html_e('Ver Alianzas y Convenios', 'uvh-theme'); ?>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

@@ -107,6 +107,7 @@ if (!defined('ABSPATH')) {
                             <li><a href="#programas"><?php esc_html_e('Programas Académicos', 'uvh-theme'); ?></a></li>
                             <li><a href="#admision"><?php esc_html_e('Proceso de Admisión', 'uvh-theme'); ?></a></li>
                             <li><a href="<?php echo esc_url(home_url('/noticias')); ?>"><?php esc_html_e('Noticias', 'uvh-theme'); ?></a></li>
+                            <li><a href="<?php echo esc_url(home_url('/estudios-internacionales')); ?>"><?php esc_html_e('Cooperación Nacional e Internacional', 'uvh-theme'); ?></a></li>
                         </ul>
                     </div>
                 <?php endif; ?>

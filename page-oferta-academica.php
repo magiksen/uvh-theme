@@ -53,7 +53,7 @@ get_header();
                         </p>
                         <ul class="program-card-full__features">
                             <li><strong>Tipo:</strong> Programa Nacional de Formación</li>
-                            <li><strong>Título:</strong> Licenciado(a) en Geofísica</li>
+                            <li><strong>Título:</strong> TSU/Ingeniero(a) en Geofísica</li>
                             <li><strong>Modalidad:</strong> Presencial</li>
                         </ul>
                         <div class="program-card-full__topics">
@@ -80,7 +80,7 @@ get_header();
                         </p>
                         <ul class="program-card-full__features">
                             <li><strong>Tipo:</strong> Programa Nacional de Formación</li>
-                            <li><strong>Título:</strong> Licenciado(a) en Gestión de Pozos</li>
+                            <li><strong>Título:</strong> TSU/Ingeniero(a) en Gestión de Pozos</li>
                             <li><strong>Modalidad:</strong> Presencial</li>
                         </ul>
                         <div class="program-card-full__topics">
@@ -105,7 +105,7 @@ get_header();
                         </p>
                         <ul class="program-card-full__features">
                             <li><strong>Tipo:</strong> Programa Nacional de Formación</li>
-                            <li><strong>Título:</strong> Licenciado(a) en Petroquímica</li>
+                            <li><strong>Título:</strong> TSU/Ingeniero(a) en Petroquímica</li>
                             <li><strong>Modalidad:</strong> Presencial</li>
                         </ul>
                         <div class="program-card-full__topics">
@@ -131,7 +131,7 @@ get_header();
                         </p>
                         <ul class="program-card-full__features">
                             <li><strong>Tipo:</strong> Programa Nacional de Formación</li>
-                            <li><strong>Título:</strong> Licenciado(a) en Gas</li>
+                            <li><strong>Título:</strong> TSU/Ingeniero(a) en Gas</li>
                             <li><strong>Modalidad:</strong> Presencial</li>
                         </ul>
                         <div class="program-card-full__topics">
@@ -157,7 +157,7 @@ get_header();
                         </p>
                         <ul class="program-card-full__features">
                             <li><strong>Tipo:</strong> Programa Nacional de Formación</li>
-                            <li><strong>Título:</strong> Licenciado(a) en Yacimientos</li>
+                            <li><strong>Título:</strong> TSU/Ingeniero(a) en Yacimientos</li>
                             <li><strong>Modalidad:</strong> Presencial</li>
                         </ul>
                         <div class="program-card-full__topics">

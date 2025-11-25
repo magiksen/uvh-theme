@@ -989,6 +989,113 @@ button {
     gap: 12px;
 }
 
+/* International Summary (dentro de Programs) */
+.international-summary {
+    margin-top: 64px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: var(--border-radius);
+    padding: 48px;
+    color: #fff;
+}
+
+.international-summary__content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.international-summary__icon {
+    font-size: 72px;
+    flex-shrink: 0;
+}
+
+.international-summary__text {
+    flex: 1;
+}
+
+.international-summary__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.international-summary__description {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.95;
+    margin-bottom: 20px;
+}
+
+.international-summary__highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.international-summary__highlight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-size: 0.9rem;
+}
+
+.international-summary__highlight .highlight-flag {
+    font-size: 1.25rem;
+}
+
+.international-summary__action {
+    flex-shrink: 0;
+}
+
+.international-summary__action .btn {
+    background: #fff;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+.international-summary__action .btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+    .international-summary__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .international-summary__highlights {
+        justify-content: center;
+    }
+
+    .international-summary__icon {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 640px) {
+    .international-summary {
+        padding: 32px 24px;
+    }
+
+    .international-summary__title {
+        font-size: 1.5rem;
+    }
+
+    .international-summary__highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .international-summary__highlight {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 /* ===================================
    Stats Section
    =================================== */
@@ -2140,6 +2247,70 @@ button {
     transform: translateY(-2px);
 }
 
+/* Curriculum Legend */
+.curriculum-legend {
+    margin-top: 48px;
+    padding: 24px 32px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary-color);
+}
+
+.curriculum-legend__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    text-decoration: underline;
+}
+
+.curriculum-legend__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.curriculum-legend__list li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    padding-left: 16px;
+}
+
+.curriculum-legend__list li:last-child {
+    margin-bottom: 0;
+}
+
+.curriculum-legend__list li strong {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* Leyenda dentro de malla curricular */
+.curriculum-legend--inline {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    .curriculum-legend {
+        padding: 20px 24px;
+        margin-top: 32px;
+    }
+
+    .curriculum-legend--inline {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .curriculum-legend__list li {
+        font-size: 0.875rem;
+        padding-left: 8px;
+    }
+}
+
 @media (max-width: 768px) {
     .programs-hero {
         padding: 80px 0 60px;
@@ -3205,5 +3376,355 @@ button {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===================================
+   International Cooperation Page
+   =================================== */
+.international-page {
+    background-color: #fff;
+}
+
+.international-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: #fff;
+}
+
+.international-hero__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.international-hero__subtitle {
+    font-size: 1.35rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.international-section {
+    padding: 80px 0;
+}
+
+.international-section--alt {
+    background-color: var(--bg-light);
+}
+
+/* Intro */
+.international-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.international-intro__icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+.international-intro__text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* Alliance Grid */
+.alliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.alliance-grid--international {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+/* Alliance Card */
+.alliance-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.alliance-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.alliance-card--active {
+    border-color: var(--success-color, #10b981);
+}
+
+.alliance-card--pending {
+    border-color: var(--warning-color, #f59e0b);
+}
+
+.alliance-card__badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--success-color, #10b981);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.alliance-card__badge--pending {
+    background: var(--warning-color, #f59e0b);
+}
+
+.alliance-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.alliance-card__logo {
+    flex-shrink: 0;
+}
+
+.alliance-card__flag {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.alliance-card__title-wrap {
+    flex: 1;
+}
+
+.alliance-card__country {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.alliance-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.alliance-card__subtitle {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.alliance-card__content {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.alliance-card__item {
+    margin-bottom: 12px;
+}
+
+.alliance-card__item:last-child {
+    margin-bottom: 0;
+}
+
+.alliance-card__item strong {
+    color: var(--text-dark);
+}
+
+.alliance-card__status {
+    margin-bottom: 16px;
+}
+
+.alliance-card__section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 16px 0 8px;
+}
+
+.alliance-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.alliance-card__list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.alliance-card__list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.alliance-card__highlight {
+    margin-bottom: 16px;
+}
+
+.highlight-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+/* Impact Grid */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.impact-card {
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.impact-card__icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.impact-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.impact-card__text {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Quote */
+.international-quote {
+    max-width: 800px;
+    margin: 64px auto 0;
+    padding: 32px 48px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.international-quote p {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #fff;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* CTA */
+.international-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.international-cta__content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.international-cta__title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.international-cta__text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    opacity: 0.95;
+}
+
+.international-cta .btn {
+    background-color: #fff;
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.international-cta .btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .international-hero {
+        padding: 100px 0 60px;
+    }
+
+    .international-section {
+        padding: 60px 0;
+    }
+
+    .alliance-grid,
+    .alliance-grid--international {
+        grid-template-columns: 1fr;
+    }
+
+    .alliance-card {
+        padding: 24px;
+    }
+
+    .alliance-card__flag {
+        font-size: 40px;
+    }
+
+    .international-quote {
+        padding: 24px;
+        margin-top: 48px;
+    }
+
+    .international-quote p {
+        font-size: 1.1rem;
+    }
+
+    .international-cta {
+        padding: 60px 0;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
     }
 }
