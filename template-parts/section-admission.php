@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit;
 ?>
 
 <!-- Admission Process Section -->
-<section class="programs" id="admision">
+<section class="admission-home" id="admision">
     <div class="container">
         <div class="section-header section-header--center">
             <h2 class="section-header__title"><?php esc_html_e('Proceso de Admisión', 'uvh-theme'); ?></h2>
