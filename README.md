@@ -261,6 +261,38 @@ El tema está optimizado para:
 
 ## 📝 Changelog
 
+### Versión 1.5.0 (2025-12-02)
+
+#### 🎓 Reestructuración de Oferta Académica
+- Nueva página principal de Oferta Académica con modelo educativo (Formación, Innovación, Vinculación)
+- Sección de pilares del saber (El Saber, El Conocer, El Saber Hacer, El Saber Convivir)
+- Sección de experiencia práctica con información de prácticas profesionales
+- Tarjetas de niveles de formación con enlaces a subpáginas
+
+#### 📄 Nuevas Páginas de Programas
+- `page-pnf.php` - Programas Nacionales de Formación (Pregrado) con perfiles de egreso y mallas curriculares
+- `page-pnfa.php` - Programas Nacionales de Formación Avanzada (Postgrado)
+- `page-maestrias.php` - Maestrías Especializadas
+- `page-diplomados.php` - Diplomados (Educación Continua) con 6 programas
+
+#### 🎨 Nuevos Estilos CSS
+- Estilos para modelo educativo (modelo-pillars, saber-section)
+- Estilos para experiencia práctica (practica-grid, proyecto-sociointegrador)
+- Estilos para niveles de formación (niveles-grid, nivel-card)
+- Estilos para títulos académicos (titulos-grid, titulo-card)
+- Estilos para diplomados (diplomados-grid, diplomado-card)
+- Estilos para breadcrumb de navegación
+- Estilos para perfiles de egreso en program-card-full
+
+#### 🔗 Estructura de Menú
+- Submenú de Oferta Académica con 4 items:
+  - Programas Nacionales de Formación (PNF)
+  - Programas Nacionales de Formación Avanzada (PNFA)
+  - Maestrías Especializadas
+  - Diplomados (Educación Continua)
+
+---
+
 ### Versión 1.4.0 (2025-11-25)
 
 #### 📚 Mallas Curriculares Completas

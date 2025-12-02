@@ -137,14 +137,14 @@ get_header();
                         </div>
                     </div>
                     <div class="alliance-card__content">
-                        <p class="alliance-card__status"><strong>Estatus:</strong> Memorando de Entendimiento</p>
-                        <!-- <h4 class="alliance-card__section-title">Alcance:</h4>
+                        <p class="alliance-card__status">Memorando de Entendimiento</p>
+                        <h4 class="alliance-card__section-title">Alcance:</h4>
                         <ul class="alliance-card__list">
                             <li>Programas de doble titulación en ingeniería petrolera</li>
                             <li>Maestrías especializadas para técnicos venezolanos</li>
                             <li>Intercambio de estudiantes y profesores investigadores</li>
                             <li>Investigación conjunta en yacimientos no convencionales</li>
-                        </ul> -->
+                        </ul>
                     </div>
                 </div>
 

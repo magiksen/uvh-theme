@@ -62,10 +62,18 @@ if (!defined('ABSPATH')) {
                     <ul class="navbar__menu">
                         <li><a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Inicio', 'uvh-theme'); ?></a></li>
                         <li><a href="<?php echo esc_url(home_url('/sobre-nosotros')); ?>"><?php esc_html_e('Sobre Nosotros', 'uvh-theme'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/oferta-academica')); ?>"><?php esc_html_e('Oferta Académica', 'uvh-theme'); ?></a></li>
+                        <li class="menu-item-has-children">
+                            <a href="<?php echo esc_url(home_url('/oferta-academica')); ?>"><?php esc_html_e('Oferta Académica', 'uvh-theme'); ?></a>
+                            <ul class="sub-menu">
+                                <li><a href="<?php echo esc_url(home_url('/programas-nacionales-de-formacion')); ?>"><?php esc_html_e('Programas Nacionales de Formación (PNF)', 'uvh-theme'); ?></a></li>
+                                <li><a href="<?php echo esc_url(home_url('/programas-nacionales-de-formacion-avanzada')); ?>"><?php esc_html_e('Programas de Formación Avanzada (PNFA)', 'uvh-theme'); ?></a></li>
+                                <li><a href="<?php echo esc_url(home_url('/maestrias')); ?>"><?php esc_html_e('Maestrías Especializadas', 'uvh-theme'); ?></a></li>
+                                <li><a href="<?php echo esc_url(home_url('/diplomados')); ?>"><?php esc_html_e('Diplomados', 'uvh-theme'); ?></a></li>
+                            </ul>
+                        </li>
                         <li><a href="<?php echo esc_url(home_url('/investigacion')); ?>"><?php esc_html_e('Investigación', 'uvh-theme'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/estudios-internacionales')); ?>"><?php esc_html_e('Cooperación', 'uvh-theme'); ?></a></li>
                         <li><a href="<?php echo esc_url(home_url('/#admision')); ?>"><?php esc_html_e('Admisión', 'uvh-theme'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/noticias')); ?>"><?php esc_html_e('Noticias', 'uvh-theme'); ?></a></li>
                     </ul>
                     <?php
                 }

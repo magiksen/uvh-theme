@@ -173,6 +173,85 @@ button {
     width: 100%;
 }
 
+/* Submenú dropdown */
+.navbar__menu > li {
+    position: relative;
+}
+
+.navbar__menu .menu-item-has-children > a::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    margin-left: 6px;
+    margin-right: 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.navbar__menu .menu-item-has-children:hover > a::before {
+    transform: rotate(180deg);
+}
+
+.navbar__menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.navbar__menu .sub-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.navbar__menu .menu-item-has-children:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+.navbar__menu .sub-menu li {
+    display: block;
+}
+
+.navbar__menu .sub-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+}
+
+.navbar__menu .sub-menu a::after {
+    display: none;
+}
+
+.navbar__menu .sub-menu a:hover {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    padding-left: 24px;
+}
+
 .navbar__actions {
     display: flex;
     align-items: center;
@@ -3399,6 +3478,58 @@ button {
 @media (max-width: 968px) {
     .navbar__menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        gap: 0;
+    }
+
+    .navbar__menu.active {
+        display: flex;
+    }
+
+    .navbar__menu > li {
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar__menu > li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar__menu > li > a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .navbar__menu .sub-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        padding: 0 0 10px 20px;
+        margin-top: 0;
+        min-width: auto;
+        background: transparent;
+    }
+
+    .navbar__menu .sub-menu::before {
+        display: none;
+    }
+
+    .navbar__menu .sub-menu a {
+        padding: 10px 0;
+        font-size: 0.85rem;
+        color: var(--text-light);
+    }
+
+    .navbar__menu .sub-menu a:hover {
+        padding-left: 10px;
     }
 
     .hamburger {
@@ -3840,5 +3971,553 @@ button {
 
     .impact-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
+   Oferta Académica - Modelo Educativo
+   =================================== */
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-gold);
+}
+
+.breadcrumb span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Modelo Intro */
+.modelo-intro {
+    max-width: 900px;
+    margin: 0 auto 48px;
+}
+
+.modelo-intro__text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Modelo Pillars */
+.modelo-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.modelo-pillar {
+    text-align: center;
+    padding: 32px 24px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modelo-pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.modelo-pillar__icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.modelo-pillar__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.modelo-pillar__text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* Saber Section */
+.saber-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    padding: 48px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+.saber-section__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.saber-section__intro {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 auto 32px;
+}
+
+.saber-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.saber-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 16px 24px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.saber-item__icon {
+    font-size: 1.5rem;
+}
+
+.saber-item__text {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Practica Grid */
+.practica-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.practica-card {
+    text-align: center;
+    padding: 32px 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.practica-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.practica-card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.practica-card__text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Proyecto Sociointegrador */
+.proyecto-sociointegrador {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a2a5c 100%);
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.proyecto-sociointegrador__icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.proyecto-sociointegrador__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.proyecto-sociointegrador__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Niveles Grid */
+.niveles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.nivel-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.nivel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nivel-card__badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nivel-card--pregrado .nivel-card__badge {
+    background: var(--primary-gold);
+    color: var(--text-dark);
+}
+
+.nivel-card--postgrado .nivel-card__badge {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.nivel-card--maestria .nivel-card__badge {
+    background: var(--primary-red);
+    color: white;
+}
+
+.nivel-card--diplomado .nivel-card__badge {
+    background: #28a745;
+    color: white;
+}
+
+.nivel-card__icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.nivel-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.nivel-card__description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.nivel-card__titles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.nivel-title-tag {
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.nivel-card__link {
+    font-weight: 600;
+    color: var(--primary-red);
+    font-size: 0.95rem;
+}
+
+.nivel-card:hover .nivel-card__link {
+    text-decoration: underline;
+}
+
+/* Titulos Grid */
+.titulos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+    justify-items: center;
+}
+
+.titulos-grid:has(.titulo-card:only-child),
+.titulos-grid:has(.titulo-card:nth-child(2):last-child) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+    justify-content: center;
+}
+
+.titulos-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto 48px;
+}
+
+.titulo-card {
+    text-align: center;
+    padding: 32px 24px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--primary-gold);
+}
+
+.titulo-card--large {
+    padding: 48px 32px;
+}
+
+.titulo-card__icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.titulo-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.titulo-card__text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.titulo-card__duration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.titulo-card__duration-icon {
+    font-size: 1.2rem;
+}
+
+/* Program Card Full - Perfiles */
+.program-card-full__perfiles {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-gold);
+}
+
+.program-card-full__perfiles h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.program-card-full__perfiles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-card-full__perfiles li {
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-bottom: 1px solid #eee;
+}
+
+.program-card-full__perfiles li:last-child {
+    border-bottom: none;
+}
+
+.program-card-full__perfiles li strong {
+    color: var(--text-dark);
+}
+
+/* Diplomado Info */
+.diplomado-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.diplomado-info__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.diplomado-info__icon {
+    font-size: 1.5rem;
+}
+
+.diplomado-info__text {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Diplomados Grid */
+.diplomados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.diplomado-card {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diplomado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.diplomado-card__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.diplomado-card__icon {
+    font-size: 2.5rem;
+}
+
+.diplomado-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.diplomado-card__objective {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.diplomado-card__modules {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.diplomado-card__modules h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.diplomado-card__modules ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.diplomado-card__modules li {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    padding: 4px 0;
+}
+
+/* Responsive - Oferta Académica */
+@media (max-width: 992px) {
+    .modelo-pillars {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .practica-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .niveles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .titulos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diplomados-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .saber-section {
+        padding: 32px 20px;
+    }
+
+    .saber-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .practica-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-sociointegrador {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+    }
+
+    .nivel-card {
+        padding: 24px;
+    }
+
+    .nivel-card__badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 16px;
     }
 }
