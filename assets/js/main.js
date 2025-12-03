@@ -152,10 +152,14 @@ style.textContent = `
         top: 82px;
         left: 0;
         right: 0;
+        bottom: 0;
         background-color: white;
         padding: 20px;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         animation: slideDown 0.3s ease-out;
+        max-height: calc(100vh - 82px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     @keyframes slideDown {
