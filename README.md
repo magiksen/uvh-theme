@@ -85,7 +85,7 @@ uvh-theme/
 ├── single.php                      # Template para posts
 ├── page.php                        # Template para páginas
 ├── archive.php                     # Template para archivos
-├── style.css                       # Hoja de estilos principal (v1.3.0)
+├── style.css                       # Hoja de estilos principal (v1.6.0)
 ├── theme.json                      # Configuración del tema (FSE)
 ├── screenshot.png                  # Captura del tema
 └── README.md                       # Este archivo
@@ -261,6 +261,22 @@ El tema está optimizado para:
 
 ## 📝 Changelog
 
+### Versión 1.6.0 (2025-12-03)
+
+#### 🌍 Internacionalización y Cursos AAP
+- Nueva página `page-cursos.php` para la **Oferta de Cursos: Ampliación y Adiestramiento Profesional (AAP)** basada en `oferta-cursos.md`.
+- Tablas responsivas de cursos por área utilizando estilos compartidos con `.curriculum-table`.
+- Actualización del submenú de **Oferta Académica** con el item `Cursos (AAP)`.
+
+#### 🧭 Navegación y Header Responsive
+- Integración del selector de idiomas mediante shortcode `[gtranslate]` junto al botón **Intranet**.
+- El header ahora utiliza el ancho completo (`.header .container` sin `max-width`), mejorando la distribución de logo, menú y acciones.
+- Activación del menú hamburguesa a partir de `max-width: 1400px` para evitar solapamientos en resoluciones intermedias.
+- Mejora del layout móvil: logo centrado arriba, acciones (Intranet + idioma + hamburguesa) debajo y menú desplegable a pantalla completa con scroll interno.
+- Ajuste de `z-index` para el overlay del menú y el botón hamburguesa/X, evitando que el widget de idiomas quede por encima.
+
+---
+
 ### Versión 1.5.0 (2025-12-02)
 
 #### 🎓 Reestructuración de Oferta Académica
@@ -392,8 +408,8 @@ El tema está optimizado para:
 - **Desarrollado para**: Universidad Venezolana de los Hidrocarburos
 - **Basado en**: Plantilla HTML UVH
 - **Tipografía**: Georama (Google Fonts)
-- **Versión**: 1.3.0
-- **Última actualización**: 24 de Noviembre 2025
+- **Versión**: 1.6.0
+- **Última actualización**: 3 de Diciembre 2025
 
 ## 📄 Licencia
 

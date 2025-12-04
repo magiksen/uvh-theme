@@ -267,6 +267,8 @@ button {
     flex-direction: column;
     gap: 4px;
     padding: 8px;
+    position: relative;
+    z-index: 1100;
 }
 
 .hamburger span {
