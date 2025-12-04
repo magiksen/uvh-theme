@@ -82,6 +82,7 @@ if (!defined('ABSPATH')) {
 
                 <div class="navbar__actions">
                     <a href="#" class="btn btn--secondary"><?php esc_html_e('Intranet', 'uvh-theme'); ?></a>
+                    <?php echo do_shortcode('[gtranslate]'); ?>
                     <button class="hamburger" aria-label="<?php esc_attr_e('Menú', 'uvh-theme'); ?>" aria-expanded="false">
                         <span></span>
                         <span></span>
