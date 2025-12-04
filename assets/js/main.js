@@ -160,6 +160,7 @@ style.textContent = `
         max-height: calc(100vh - 82px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        z-index: 1000;
     }
     
     @keyframes slideDown {
