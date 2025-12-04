@@ -2177,7 +2177,8 @@ button {
     gap: 32px;
 }
 
-.curriculum-table-wrapper {
+.curriculum-table-wrapper,
+.courses-table-wrapper {
     background-color: white;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
@@ -2193,22 +2194,26 @@ button {
     font-weight: 700;
 }
 
-.curriculum-table-scroll {
+.curriculum-table-scroll,
+.courses-table-scroll {
     overflow-x: auto;
 }
 
-.curriculum-table {
+.curriculum-table,
+.courses-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9rem;
 }
 
-.curriculum-table thead {
+.curriculum-table thead,
+.courses-table thead {
     background-color: #FDB913;
     color: #1a1a1a;
 }
 
-.curriculum-table th {
+.curriculum-table th,
+.courses-table th {
     padding: 12px 10px;
     text-align: left;
     font-weight: 700;
@@ -2217,13 +2222,15 @@ button {
     white-space: nowrap;
 }
 
-.curriculum-table td {
+.curriculum-table td,
+.courses-table td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
-.curriculum-table tbody tr:hover {
+.curriculum-table tbody tr:hover,
+.courses-table tbody tr:hover {
     background-color: rgba(220, 38, 38, 0.05);
 }
 
@@ -2256,12 +2263,15 @@ button {
 
 /* Responsive table */
 @media (max-width: 768px) {
-    .curriculum-table {
+    .curriculum-table,
+    .courses-table {
         font-size: 0.8rem;
     }
     
     .curriculum-table th,
-    .curriculum-table td {
+    .curriculum-table td,
+    .courses-table th,
+    .courses-table td {
         padding: 8px 6px;
         font-size: 0.75rem;
     }

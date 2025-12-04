@@ -69,6 +69,7 @@ if (!defined('ABSPATH')) {
                                 <li><a href="<?php echo esc_url(home_url('/programas-nacionales-de-formacion-avanzada')); ?>"><?php esc_html_e('Programas de Formación Avanzada (PNFA)', 'uvh-theme'); ?></a></li>
                                 <li><a href="<?php echo esc_url(home_url('/maestrias')); ?>"><?php esc_html_e('Maestrías Especializadas', 'uvh-theme'); ?></a></li>
                                 <li><a href="<?php echo esc_url(home_url('/diplomados')); ?>"><?php esc_html_e('Diplomados', 'uvh-theme'); ?></a></li>
+                                <li><a href="<?php echo esc_url(home_url('/cursos')); ?>"><?php esc_html_e('Cursos (AAP)', 'uvh-theme'); ?></a></li>
                             </ul>
                         </li>
                         <li><a href="<?php echo esc_url(home_url('/investigacion')); ?>"><?php esc_html_e('Investigación', 'uvh-theme'); ?></a></li>

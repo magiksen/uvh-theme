@@ -337,12 +337,6 @@ backToTopButton.addEventListener('mouseleave', () => {
 });
 
 // ===================================
-// Console Welcome Message
-// ===================================
-console.log('%c Universidad Venezolana de los Hidrocarburos ', 'background: #CC0033; color: white; font-size: 20px; padding: 10px;');
-console.log('%c Formando profesionales de excelencia ', 'background: #2C3E50; color: white; font-size: 14px; padding: 5px;');
-
-// ===================================
 // Performance Monitoring
 // ===================================
 window.addEventListener('load', () => {
