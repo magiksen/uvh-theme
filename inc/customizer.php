@@ -37,7 +37,7 @@ function uvh_customize_register(WP_Customize_Manager $wp_customize): void
 
     // Contact Email
     $wp_customize->add_setting('uvh_contact_email', [
-        'default'           => 'info@uvh.edu.ve',
+        'default'           => 'inscripcionesuvh@gmail.com',
         'sanitize_callback' => 'sanitize_email',
     ]);
 
@@ -57,6 +57,19 @@ function uvh_customize_register(WP_Customize_Manager $wp_customize): void
         'label'    => __('Dirección', 'uvh-theme'),
         'section'  => 'uvh_settings',
         'type'     => 'textarea',
+    ]);
+
+    // Intranet URL
+    $wp_customize->add_setting('uvh_intranet_url', [
+        'default'           => 'https://intranet.uvh.edu.ve',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control('uvh_intranet_url', [
+        'label'       => __('URL de Intranet UVH', 'uvh-theme'),
+        'description' => __('URL del sistema de Intranet para preinscripción e inscripción', 'uvh-theme'),
+        'section'     => 'uvh_settings',
+        'type'        => 'url',
     ]);
 
     // ================================

@@ -81,7 +81,7 @@ if (!defined('ABSPATH')) {
                 ?>
 
                 <div class="navbar__actions">
-                    <a href="#" class="btn btn--secondary"><?php esc_html_e('Intranet', 'uvh-theme'); ?></a>
+                    <a href="<?php echo esc_url(get_theme_mod('uvh_intranet_url', 'https://intranet.uvh.edu.ve')); ?>" class="btn btn--secondary" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Intranet', 'uvh-theme'); ?></a>
                     <?php echo do_shortcode('[gtranslate]'); ?>
                     <button class="hamburger" aria-label="<?php esc_attr_e('Menú', 'uvh-theme'); ?>" aria-expanded="false">
                         <span></span>
