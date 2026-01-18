@@ -36,6 +36,7 @@ if (!defined('ABSPATH')) exit;
             </div>
             <div class="contact__form">
                 <form id="contact-form" method="post">
+                    <?php wp_nonce_field('uvh_contact_form', 'contact_nonce'); ?>
                     <div class="form-group">
                         <label for="name"><?php esc_html_e('Nombre completo *', 'uvh-theme'); ?></label>
                         <input type="text" id="name" name="name" required>
